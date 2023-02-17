@@ -1,0 +1,162 @@
+.invite {
+  text-align: center;
+  margin: 50px 0;
+}
+.invite h3 {
+  margin-bottom: 15px;
+  color: #FF9A02;
+}
+.invite div h4 {
+  border: 1px solid black;
+  padding: 5px 20px;
+  display: inline-block;
+  background: #E5E5E5;
+}
+.invite h5 {
+  font-size: 16px;
+  border: 1px solid black;
+  padding: 5px 10px;
+  display: inline-block;
+  background: #E5E5E5;
+}
+.invite p {
+  margin: 15px 0;
+  font-size: 20px;
+  line-height: 28px;
+}
+.invite img {
+  width: 30px;
+  margin: 0 10px;
+}
+.invite div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.group-availability-breakdown-table {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.group-availability-breakdown-table h3 {
+  margin-bottom: 20px;
+  color: #FF9A02;
+}
+.table-header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px 0;
+  background: #E5E5E5;
+  border: 2px solid grey;
+}
+.table-header img {
+  width: 30px;
+}
+.table-header a {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+.table {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  border-left: 2px solid grey;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
+  margin-bottom: 50px;
+}
+.counts {
+  margin: 29px 0 0;
+}
+.counts p {
+  padding: 4.5px 55px;
+  margin: 0;
+  border-top: 1px solid grey;
+}
+.time {
+  margin: 0 10px;
+  margin-bottom: 0;
+}
+.time p {
+  margin: 10px 0;
+
+}
+
+
+.feasible-events {
+
+}
+.feasible-events h3 {
+
+}
+.feasible-event {
+  display: flex;
+  flex-flow: column wrap;
+  background: #E5E5E5;
+  border: 2px solid grey;
+  margin-bottom: 20px;
+}
+.feasible-event p {
+  margin: 0;
+}
+.feasible-event button {
+  margin: 0;
+  width: 80%;
+  padding: 0;
+  margin: 0 auto 10px;
+  padding: 5px 15px;
+}
+.details {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+}
+.detail {
+  display: flex;
+  flex-flow: column wrap;
+  width: 21%;
+  margin: 10px 0;
+  background: white;
+  border: 2px solid grey;
+  justify-content: center;
+}
+
+.detail-date {
+  display: flex;
+  flex-flow: column wrap;
+  width: 21%;
+  margin: 10px 0;
+  background: white;
+  border: 2px solid grey;
+  justify-content: center;
+}
+.detail-date p {
+  font-family: 'Russo One', sans-serif;
+  margin: 0;
+  display: block;
+  font-size: 22px;
+  line-height: 30px;
+}
+.detail-date h2 {
+  margin: 0;
+  color: black;
+}
+
+.detail p, .detail-venue p {
+  margin: 0;
+  display: block;
+  font-size: 23px;
+  line-height: 30px;
+}
+
+.detail-venue {
+  display: inline-block;
+  width: 95%;
+  margin: 0 auto 10px;
+  background: white;
+  border: 2px solid grey;
+}

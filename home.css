@@ -1,0 +1,30 @@
+.event-generator-menu-background {
+  background-image: url(images/background-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.event-generator-menu-wrapper {
+  background: rgba(0, 0, 0, 0.5);
+}
+.event-generator-menu-container {
+  padding: 110px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+.event-generator-menu-container h1 {
+  margin-bottom: 40px;
+  color: white;
+}
+.event-generator-menu-container p {
+  margin-bottom: 50px;
+  color: white;
+}
+.event-generator-menu-container a {
+  padding: 12px 35px;
+  text-decoration: none;
+  border: none;
+  font-size: 20px;
+  background-color: #FF9A02;
+  color: white;
+}

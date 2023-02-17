@@ -1,0 +1,64 @@
+.daily-availabilities div {
+  margin: 5px 0 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  width: 100%;
+  background: #E5E5E5;
+  border: 2px solid rgba(139, 139, 139, 0.5);
+}
+.daily-availabilities div label {
+  font-family: 'Oswald', sans-serif;
+}
+.daily-availabilities div div, .add-a-day {
+  align-items: center;
+  display: flex;
+  margin: 0;
+  border: none;
+  padding: 5px 0;
+  box-sizing: border-box;
+}
+.daily-availabilities div div p, .add-a-day p {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 18px;
+}
+.daily-availabilities div div input {
+  background-color: white;
+}
+
+
+.availability-time {
+  display: flex;
+  flex-flow: colum wrap;
+  align-items: center;
+  margin: 0;
+  border: none;
+  padding: 3px 0;
+  box-sizing: border-box;
+}
+
+.availability-time img, .availability-day img {
+  margin: 0 10px;
+}
+
+.add-a-slot {
+  align-items: center;
+}
+.add-a-slot p, .add-a-day p {
+  font-size: 18px;
+}
+.add-a-slot img, .add-a-day img {
+  width: 27px;
+  height: 27px;
+}
+
+.add-a-day {
+  align-items: center;
+  margin: 5px 0 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  width: 100%;
+  background: #E5E5E5;
+  border: 2px solid rgba(139, 139, 139, 0.5);
+}
+

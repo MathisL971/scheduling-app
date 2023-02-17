@@ -1,0 +1,44 @@
+.days-of-the-week-wrapper {
+  display: none;
+}
+.days-of-the-week-wrapper div {
+  display: flex;
+  margin: 5px 0;
+}
+.days-of-the-week-container {
+  display: flex;
+  flex-flow: column wrap;
+  margin-top: 5px;
+  padding: 5px 10px;
+  width: 100%;
+  background: #E5E5E5;
+  border: 2px solid rgba(139, 139, 139, 0.5);
+  box-sizing: border-box;
+}
+.days-of-the-week input {
+  width: 25px;
+  height: 25px;
+}
+.days-of-the-week label {
+  margin: auto 10px;
+  font-family: 'Oswald', sans-serif;
+}
+
+.specific-date {
+  display: none;
+}
+
+.hour-range div {
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+
+}
+.hour-range div input {
+  width: 35%;
+}
+.hour-range div label {
+  font-family: 'Oswald', sans-serif;
+}

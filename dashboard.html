@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="index.js" type="text/javascript" charset="utf-8" defer></script>
+    <title></title>
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Russo+One&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </head>
+
+  <body onload="populateDashboard()">
+    <nav class="navbar">
+      <div class="brand-title"><a href="index.html">Avail2ball</a></div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="generator.html">Scheduler</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="dashboard-wrapper">
+        <div class="dashboard-container">
+          <h2>Dashboard</h2>
+          <p>Discover the groups’ availabilities and declare your decision on feasible events </p>
+          <a class="call-to-action" href="member-registration.html">Register New Player</a>
+
+
+          <div class="invite">
+            <h3>Event ID</h3>
+            <div class="">
+              <h4 id="id-to-copy"></h4>
+              <a href="#" onclick="copyToClipboard('#id-to-copy')">
+                <img src="images/copy-paste.png" alt="">
+              </a>
+            </div>
+            <p>To invite other people to the event, simply share the event ID (to enter on the site) or the following URL with them </p>
+            <div class="">
+              <h5 id="url-to-copy"></h5>
+              <a href="#">
+                <img src="images/copy-paste.png" onclick="copyToClipboard('#url-to-copy')" alt="">
+              </a>
+            </div>
+          </div>
+          <div class="group-availability-breakdown-table">
+            <h3>Group’s Availabilities</h3>
+            <div class="table-header">
+              <img id="previousDayButton" onclick="getPreviousDay()" src="images/arrow-icon.png" alt="" style="transform: rotate(90deg);">
+              <h4 id="dashboardDate"></h4>
+              <img id="nextDayButton" onclick="getNextDay()" src="images/arrow-icon.png" alt="" style="transform: rotate(-90deg);">
+            </div>
+            <div class="table">
+              <div class="time">
+                <p>9:00</p>
+                <p>10:00</p>
+                <p>11:00</p>
+                <p>12:00</p>
+                <p>13:00</p>
+                <p>14:00</p>
+                <p>15:00</p>
+                <p>16:00</p>
+                <p>17:00</p>
+                <p>18:00</p>
+                <p>19:00</p>
+                <p>20:00</p>
+                <p>21:00</p>
+                <p>22:00</p>
+                <p>23:00</p>
+                <p>24:00</p>
+              </div>
+              <div class="counts">
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p>0 available</p>
+                <p style="border-bottom: 1px solid grey;">0 available</p>
+              </div>
+
+            </div>
+            <div class="feasible-events">
+              <h3>Feasible Events</h3>
+              <div class="feasible-event">
+                <div class="details">
+                  <div class="detail-date">
+                    <h2>23</h2>
+                    <p style="font-size: 20px;">Mon</p>
+                  </div>
+                  <div class="detail">
+                    <p>20:00</p>
+                    <p>22:00</p>
+                  </div>
+                  <div class="detail">
+                    <p>16</p>
+                    <p>avail.</p>
+                  </div>
+                  <div class="detail">
+                    <p>11</p>
+                    <p>conf.</p>
+                  </div>
+                </div>
+                <div class="detail-venue">
+                  <p>Canal Ocio Deporte</p>
+                </div>
+                <button type="button" name="button">Confirm Attendance</button>
+              </div>
+              <div class="feasible-event">
+                <div class="details">
+                  <div class="detail-date">
+                    <h2>26</h2>
+                    <p style="font-size: 24px; line-height: 25px;">Thu</p>
+                  </div>
+                  <div class="detail">
+                    <p>14:00</p>
+                    <p>15:00</p>
+                  </div>
+                  <div class="detail">
+                    <p>14</p>
+                    <p>avail.</p>
+                  </div>
+                  <div class="detail">
+                    <p>5</p>
+                    <p>conf.</p>
+                  </div>
+                </div>
+                <div class="detail-venue">
+                  <p>Canal Ocio Deporte</p>
+                </div>
+                <button type="button" name="button">Confirm Attendance</button>
+              </div>
+              <div class="feasible-event">
+                <div class="details">
+                  <div class="detail-date">
+                    <h2>27</h2>
+                    <p style="font-size: 24px; line-height: 24px;">Fri</p>
+                  </div>
+                  <div class="detail">
+                    <p>09:00</p>
+                    <p>11:00</p>
+                  </div>
+                  <div class="detail">
+                    <p>23</p>
+                    <p>avail.</p>
+                  </div>
+                  <div class="detail">
+                    <p>13</p>
+                    <p>conf.</p>
+                  </div>
+                </div>
+                <div class="detail-venue">
+                  <p>Retiro Park</p>
+                </div>
+                <button type="button" name="button">Confirm Attendance</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+</html>

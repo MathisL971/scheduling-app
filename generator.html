@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="generator.css">
+    <script src="index.js" type="text/javascript" charset="utf-8" defer></script>
+    <title></title>
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Russo+One&display=swap" rel="stylesheet">
+  </head>
+
+
+  <body>
+    <nav class="navbar">
+      <div class="brand-title"><a href="index.html">Avail2ball</a></div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="generator.html">Scheduler</a></li>
+          <li><a href="events.html">Events</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div class="generator-wrapper">
+        <div class="generator-container">
+          <h2>Scheduler</h2>
+          <p>Define basic information about the event</p>
+
+          <form class="generator-form" action="index.html" method="post">
+            <div id="eventTitleContainer" class="event-title">
+              <label for="name">Event Title</label><br>
+              <input type="text" id="name" name="name" required="" minlength="1" maxlength="30" size="10">
+            </div>
+            <div id="scheduleTypeContainer" class="schedule-type">
+              <label for="name">Schedule Type</label><br>
+              <select id="scheduleType" class="" name="" onchange="displaySchedule()">
+                <option value=""></option>
+                <option value="days-of-the-week">Day(s) of the week</option>
+                <option value="specific-date">Specific Date</option>
+              </select>
+            </div>
+            <div id="daysOfTheWeekContainer" class="days-of-the-week-wrapper">
+              <label for="name">Day(s) of the week to include</label><br>
+              <div class="days-of-the-week-container">
+                <div class="days-of-the-week">
+                  <input type="checkbox" id="Monday" name="Monday">
+                  <label for="monday">Monday</label>
+                </div>
+                <div class="days-of-the-week">
+                  <input type="checkbox" id="Tuesday" name="Tuesday">
+                  <label for="tuesday">Tuesday</label>
+                </div>
+                <div class="days-of-the-week">
+                  <input type="checkbox" id="Wednesday" name="Wednesday">
+                  <label for="wednesday">Wednesday</label>
+                </div>
+                <div class="days-of-the-week">
+                  <input type="checkbox" id="Thursday" name="Thursday">
+                  <label for="thursday">Thursday</label>
+                </div>
+                <div class="days-of-the-week">
+                  <input type="checkbox" id="Friday" name="Friday">
+                  <label for="friday">Friday</label>
+                </div>
+                <div class="days-of-the-week">
+                  <input type="checkbox" id="Saturday" name="Satuday">
+                  <label for="saturday">Saturday</label>
+                </div>
+                <div class="days-of-the-week">
+                  <input type="checkbox" id="Sunday" name="Sunday">
+                  <label for="sunday">Sunday</label>
+                </div>
+              </div>
+            </div>
+            <div id="specificDateContainer" class="specific-date">
+              <label for="start">Date</label>
+              <input type="date" name="specific-date" id="specificDate">
+            </div>
+            <div id="hourRangeContainer" class="hour-range">
+              <label for="name">Hour Range</label><br>
+              <div class="hours">
+                <label for="appt">From</label>
+                <input type="time" id="hourLow" name="after" min="09:00" max="00:00" required="">
+                <label for="appt">Until</label>
+                <input type="time" id="hourHigh" name="after" min="09:00" max="00:00" required="">
+              </div>
+
+            </div>
+            <div id="durationContainer" class="game-duration">
+              <label for="name">Game Duration</label><br>
+              <select id="duration" class="" name="">
+                <option value=""></option>
+                <option value="1h">1 Hour</option>
+                <option value="2h">2 Hours</option>
+                <option value="3h">3 Hours</option>
+                <option value="4h">4 Hours</option>
+                <option value="5h">5 Hours</option>
+                <option value="6h">6 Hours</option>
+                <option value="7h">7 Hours</option>
+                <option value="8h">8 Hours</option>
+                <option value="9h">9 Hours</option>
+                <option value="10h">10 Hours</option>
+              </select>
+            </div>
+            <div id="minNumPlayersContainer" class="min-num-players">
+              <label for="name">Minimum # Of Players</label><br>
+              <select id="minParticipant" class="" name="">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+              </select>
+            </div>
+            <div id="maxNumPlayersContainer" class="max-num-players">
+              <label for="name">Maximum # Of Players (Optional)</label><br>
+              <select id="maxParticipant" class="" name="">
+                <option value=""></option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+              </select>
+            </div>
+            <button type="button" name="button" onclick="generateEvent()">Generate Event</button>
+
+          </form>
+        </div>
+
+
+
+
+      </div>
+    </main>
+  </body>
+
+</html>
