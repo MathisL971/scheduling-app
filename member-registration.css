@@ -38,7 +38,7 @@
 }
 
 .availability-time img, .availability-day img {
-  margin: 0 10px;
+  margin: 5px 10px;
 }
 
 .add-a-slot {
@@ -62,3 +62,7 @@
   border: 2px solid rgba(139, 139, 139, 0.5);
 }
 
+.availabilitySlotContainer {
+  display: flex;
+  flex-direction: column;
+}

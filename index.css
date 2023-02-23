@@ -206,7 +206,7 @@ header img {
 }
 
 .generator-form div, .event-registration-form div {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 .generator-form button, .event-registration-form button, .dashboard-container button, .events-container button {
   padding: 12px 35px;

@@ -12,11 +12,10 @@
     <script src="components/footer.js" type="text/javascript" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Russo+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   </head>
 
 
-  <body>
+  <body onload="populateMemberRegistration()">
     <nav class="navbar">
       <div class="brand-title"><a href="index.html">Avail2ball</a></div>
       <a href="#" class="toggle-button">
@@ -37,7 +36,6 @@
         <div class="event-registration-container">
           <h2>Player Registration</h2>
           <p>Let the organizer know a bit about yourself and when you can play</p>
-
           <form class="event-registration-form" action="index.html" method="post">
             <div class="first-name">
               <label for="name">First Name</label><br>
@@ -49,49 +47,16 @@
             </div>
             <div class="password">
               <label for="name">Password (optional)</label><br>
-              <input type="text" id="pword" name="name" required="" minlength="1" maxlength="30" size="10">
+              <input type="password" id="pword" name="name" required="" minlength="1" maxlength="30" size="10">
             </div>
             <div id="dailyAvailabilitiesContainer" class="daily-availabilities">
               <label for="name">Daily Availabilities</label>
-              <div class="day">
-                <div class="availability-day">
-                  <select class="" name="">
-                    <option value="select">Select the day</option>
-                    <option value="monday">Monday</option>
-                    <option value="wednesday">Wednesday</option>
-                    <option value="saturday">Saturday</option>
-                    <option value="sunday">Sunday</option>
-                  </select>
-                  <img onclick="deleteDay()" src="images/trash-red.png" alt="red-bin-icon">
-                </div>
-                <div id="availabilitySlot" class="availability-time">
-                  <input type="time" id="from" name="after" min="09:00" max="00:00" required="">
-                  <p>to</p>
-                  <input type="time" id="to" name="after" min="00:00" max="00:00" required="">
-                  <img src="images/trash-black.png" alt="bin-icon">
-                </div>
-
-                <div class="add-a-slot">
-                  <img src="images/+iconv2.png" alt="+icon">
-                  <p>Add a slot</p>
-                </div>
-              </div>
-            </div>
-            <div class="add-a-day">
-              <img onclick="addDay()" src="images/+iconv2.png" alt="+icon">
-              <p>Add a day</p>
+              
             </div>
             <button type="button" name="button" onclick="createParticipant()">Save Information</button>
-
           </form>
         </div>
-
-
-
-
       </div>
-
     </main>
   </body>
-
 </html>
